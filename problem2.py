@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from googlesearch import search
-import speech_recognition
+import speech_recognition as sr
 
 options = '''
 Press 1 to type topic
@@ -21,7 +21,19 @@ if choice == '1' :
 	print(f.read())
 	f.close()
 elif choice == '2' :
-	print("program still in process")
+	 r = sr.Recognizer()
+
+     with sr.Microphone() as sorce:
+         print("Enter your searh")
+         audio=r.listen(source)
+		print("search received")
+
+         try:
+             text = r.recognize_google(audio)
+             print('You said : {}'.format(text) )
+
+         except Exception as e:
+             print(e)
 else :
 	print("Enter correct choice!!!!")
 
