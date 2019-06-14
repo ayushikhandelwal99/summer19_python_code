@@ -15,4 +15,4 @@ for i in search(web,stop=5):
 	url.svg("qr"+str(u)+".svg", scale = 6)
 	u+=1
 	print(url.terminal())
-
+os.system('mv *.png /var/www/html')
