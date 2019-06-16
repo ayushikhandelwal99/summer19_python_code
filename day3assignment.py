@@ -24,9 +24,9 @@ elif choice == 2 :
 elif choice == 3 :
 	data=input("type your search :--->  ")
 	webbrowser.open_new_tab('https://www.google.com/search?q='+data)
-elif choice == 4 :
-	number=input("Enter your number with your country code:")
-	webbrowser.open_new_tab('https://api.whatsapp.com/send?phone='+number)      
+#elif choice == 4 :
+#	number=input("Enter your number with your country code:")
+#	webbrowser.open_new_tab('https://api.whatsapp.com/send?phone='+number)      
 elif choice == 5 :
 	current_time=time.ctime()
 	print(current_time)
